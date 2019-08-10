@@ -1,0 +1,1 @@
+graphql: npm start --prefix graphql
