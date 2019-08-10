@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import MediaBoard from "./components/MediaBoard";
 import AddMedia from "./components/AddMedia";
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 
 const App: React.FC = () => {
   const [medias, setMedias] = useState([

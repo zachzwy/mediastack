@@ -9,10 +9,10 @@ const MediaBoard = ({
     <div className="media-board">
       {medias.map((media, i) => (
         <div key={i} className="media">
-          <div>
+          <div className="logo">
             <img src={`${media.src}?size=100`} alt={`${media.name}'s logo`} />
           </div>
-          <span>{media.name}</span>
+          <a href={`https://www.${media.name}.com`}>@{media.name}</a>
         </div>
       ))}
     </div>

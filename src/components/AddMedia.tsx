@@ -4,8 +4,16 @@ const AddMedia = ({ handleAdd }: { handleAdd: Function }) => {
   const myRef = createRef<HTMLInputElement>();
   return (
     <div className="add-media">
-      <input type="text" ref={myRef} />
-      <button onClick={() => handleAdd(myRef.current!.value)}>Add</button>
+      <form
+        onSubmit={e => {
+          handleAdd(myRef.current!.value);
+          e.preventDefault();
+          myRef.current!.value = "";
+        }}
+      >
+        <input type="text" ref={myRef} className="input-box" />
+        <input type="submit" value="Add" className="input-button" />
+      </form>
     </div>
   );
 };
